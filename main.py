@@ -21,7 +21,7 @@ def main():
 
     while(True):
         time.sleep(5)
-        mqtt.publish_mqtt_message("Dia duit")
+        mqtt.publish_mqtt_message("Conas atá tú")
 
 if __name__ == "__main__":
     main()
