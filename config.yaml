@@ -1,0 +1,5 @@
+#These config values will be changed from the ci/cd pipeline
+mqtt:
+  server: 'broker.mqttdashboard.com'
+  uplink_topic: '/testtopic'
+  downlink_topic: '/testtopic2'
