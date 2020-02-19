@@ -6,7 +6,6 @@ ipaddress==1.0.17
 keyring==10.6.0
 keyrings.alt==3.0
 paho-mqtt==1.5.0
-pygobject
 PyYAML==5.3
 SecretStorage==2.3.1
 six==1.11.0
