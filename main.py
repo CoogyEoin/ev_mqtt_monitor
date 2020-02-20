@@ -16,12 +16,19 @@ def main():
     server = dataMap['mqtt']['server']
     uplink =  dataMap['mqtt']['uplink_topic']
     downlink = dataMap['mqtt']['downlink_topic']
+    
+    input_pin = 13
+    output_pin = 15
 
     mqtt = MQTTHandler(server, uplink, downlink)
+    data = DataHandler(input_pin,output_pin)
 
     while(True):
         time.sleep(5)
-        mqtt.publish_mqtt_message("Conas atá tú")
+        msg = data.get_mqtt_message()
+        
+        print("Sending message: " + msg)
+        mqtt.publish_mqtt_message(msg)
 
 if __name__ == "__main__":
     main()
