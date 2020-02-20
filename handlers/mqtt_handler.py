@@ -37,7 +37,6 @@ class MQTTHandler:
 		message: The message being sent to the MQTT topic
 		"""
 		self.client.publish(self.the_mqtt_uplink_topic, message)
-		print("Publishing MQTT message: " + message)
 
 	def connect_callback(self):
 		print("Connected to MQTT server")

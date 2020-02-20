@@ -1,6 +1,5 @@
 import json
 import datetime
-#import RPi.GPIO as GPIO
 
 class DataHandler:
     

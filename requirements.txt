@@ -12,3 +12,4 @@ six==1.11.0
 cairocffi
 Flask
 gunicorn
+RPi.GPIO==0.7.0
