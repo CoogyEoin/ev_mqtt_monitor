@@ -1,4 +1,4 @@
-FROM python:3
+FROM armhf/python:3
 
 WORKDIR /usr/src/grianity
 RUN export PKG_CONFIG_PATH="${PKG_CONFIG_PATH}:/usr/local/opt/libffi/lib/pkgconfig"
