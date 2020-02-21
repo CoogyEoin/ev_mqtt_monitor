@@ -1,4 +1,4 @@
-FROM arm32v7/python:3
+FROM arm32v7/python:3.7-buster
 
 WORKDIR /usr/src/grianity
 RUN export PKG_CONFIG_PATH="${PKG_CONFIG_PATH}:/usr/local/opt/libffi/lib/pkgconfig"
