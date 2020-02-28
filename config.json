@@ -1,0 +1,6 @@
+{
+	"server": "endpoint.amazonaws.com",
+       	"uplink_topic":  "testtopic1",
+       	"downlink_topic": "testtopic2",
+	"clientID":"deviceID"
+}
