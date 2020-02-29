@@ -28,7 +28,10 @@ clientID = dataMap["clientID"]
 
 def main():
     print("Dia duit")
-
+    print("Using config data: ")
+    print("Uplink MQTT topic: " + uplink); 
+    print("Downlink MQTT topic: " + downlink);
+    print("Endpoint: " + endpoint);
     input_pin = 13
     output_pin = 15
 
