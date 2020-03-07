@@ -4,23 +4,27 @@ import time
 import json
 import argparse
 
-dataMap = None
-
-with open('config.json') as f:
-    # use safe_load instead load
-    dataMap = json.load(f)
-
 # Read in command-line parameters
 parser = argparse.ArgumentParser()
 
 parser.add_argument("-r", "--rootCA", action="store", required=True, dest="rootCAPath", help="Root CA file path")
-parser.add_argument("-c", "--cert", action="store",required=True, dest="certificatePath", help="Certificate file path")
-parser.add_argument("-k", "--key", action="store",required=True, dest="privateKeyPath", help="Private key file path")
+parser.add_argument("-c", "--cert", action="store", required=True, dest="certificatePath", help="Certificate file path")
+parser.add_argument("-k", "--key", action="store", required=True, dest="privateKeyPath", help="Private key file path")
+parser.add_argument("-cf", "--config", action="store",required=True, dest="configFile", help="Config file for endpoint and mqtt topics")
+
 
 args = parser.parse_args()
 rootCAPath = args.rootCAPath
 certificatePath = args.certificatePath
 privateKeyPath = args.privateKeyPath
+configFile = args.configFile
+
+#Reading in the config file from arguments
+dataMap = None
+with open(configFile) as f:
+    # use safe_load instead load
+    dataMap = json.load(f)
+
 endpoint = dataMap["server"]
 uplink = dataMap["uplink_topic"]
 downlink = dataMap["downlink_topic"]
