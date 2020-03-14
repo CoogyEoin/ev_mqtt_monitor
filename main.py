@@ -7,9 +7,9 @@ import argparse
 # Read in command-line parameters
 parser = argparse.ArgumentParser()
 
-parser.add_argument("-r", "--rootCA", action="store", required=True, dest="rootCAPath", help="Root CA file path")
-parser.add_argument("-c", "--cert", action="store", required=True, dest="certificatePath", help="Certificate file path")
-parser.add_argument("-k", "--key", action="store", required=True, dest="privateKeyPath", help="Private key file path")
+parser.add_argument("-r", "--rootCA", action="store", default="~/grianity/certs/rootCA.pem", dest="rootCAPath", help="Root CA file path")
+parser.add_argument("-c", "--cert", action="store", default="~/grianity/certs/deviceCertAndCACert.crt", dest="certificatePath", help="Certificate file path")
+parser.add_argument("-k", "--key", action="store", default="~/grianity/certs/deviceCert.key", dest="privateKeyPath", help="Private key file path")
 parser.add_argument("-cf", "--config", action="store",required=True, dest="configFile", help="Config file for endpoint and mqtt topics")
 
 
